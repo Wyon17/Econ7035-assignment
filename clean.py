@@ -22,10 +22,8 @@ def clean_data(input1,input2,output):
     print("Output file shape:" ,output_data.shape)
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
-        print("Please provide 3 required arguments: input1, input2, and output")
-        sys.exit(1)
+    input_file1 = "respondent_contact.csv"
+    input_file2 = "respondent_other.csv"
+    output_file = "respondent_cleaned.csv"
 
-    input1 = sys.argv[1]
-    input2 = sys.argv[2]
-    output = sys.argv[3]
+    clean_data(input_file1, input_file2, output_file)
