@@ -4,8 +4,8 @@ import pandas as pd
 import sys
 
 def clean_data(input1,input2,output):
-    data1 = read_csv('respondent_contact.csv')
-    data2 = read_csv('respondent_other.csv')
+    data1 = pd.read_csv('respondent_contact.csv')
+    data2 = pd.read_csv('respondent_other.csv')
 
     merged_data = pd.merge(data1, data2, left_on="respondent_id", right_on="id")
 
@@ -17,7 +17,7 @@ def clean_data(input1,input2,output):
 
     merged_data.to_csv(output,index=False)
 
-    output_data = read_csv(output)
+    output_data = pd.read_csv(output)
 
     print("Output file shape:" ,output_data.shape)
 
