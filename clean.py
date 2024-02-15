@@ -20,3 +20,10 @@ def clean_data(input1,input2,output):
     output_data = read_csv(output)
 
     print("Output file shape:" ,output_data.shape)
+
+if __name__ == "__main__":
+    input_file1 = "respondent_contact.csv"
+    input_file2 = "respondent_other.csv"
+    output_file = "output.csv"
+
+    clean_data(input_file1, input_file2, output_file)
